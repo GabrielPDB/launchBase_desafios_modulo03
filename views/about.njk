@@ -1,0 +1,34 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+
+    <title>Sobre - Desafio 3-1: Primeiro servidor</title>
+
+{% endblock %}
+
+{% block content %}
+
+    <div id="wrapper">
+        <img src="{{ about.image_url }}" alt="Rocketseat">
+        <h1>{{ about.name }}</h1>
+        <p>{{ about.slogan }}</p>
+        <ul>
+            {% for course in about.courses %}
+
+                <li class="item">
+                    <img src="{{course.image_url}}" alt="{{course.name}}">
+                    <h2>{{course.name}}</h2>
+                </li>
+
+            {% endfor %}
+
+        </ul>
+    </div>
+
+    <div id="links-footer" class="links">
+        {% for link in about.links %}
+            <a href="{{link.url}}" target="_blank">{{link.name}}</a>
+        {% endfor %}
+    </div>
+
+{% endblock %}

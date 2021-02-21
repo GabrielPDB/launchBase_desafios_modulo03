@@ -1,0 +1,169 @@
+:root {
+    --color-green: #50fa7b;
+    --color_rocket: #7159c1;
+}
+
+body {
+    background: #282A36;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    text-align: center;
+    color: white;
+}
+
+header {
+    padding: 30px;
+}
+
+.links a {
+    color: white;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0 16px;
+    text-decoration: none;
+}
+
+header div a {
+    padding: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+header div a:hover {
+    color: #50fa7b;
+    transition: color 200ms;
+}
+
+#wrapper {
+    text-align: center;
+    padding: 32px;
+}
+
+#wrapper img {
+    width: 300px;
+    border-radius: 50%;
+}
+
+#wrapper h1 {
+    color: #6633cc;
+    font-size: 48px;
+}
+
+#wrapper h1:hover {
+    color: #50fa7b;
+    transition: 200ms;
+    cursor: pointer;
+}
+
+#wrapper p {
+    color: white;
+    font-size: 24px;
+}
+
+#wrapper ul {
+    width: 30vw;
+    margin: 32px auto;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    color: white;
+}
+
+#wrapper ul li:hover {
+    color: #6633cc;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+#wrapper ul li img {
+    width: 50%;
+}
+
+#wrapper ul li h2 {
+    font-size: 18px;
+}
+
+#links-footer a {
+    border-bottom: 1px solid var(--color-green);
+}
+
+#links-footer a:hover {
+    color: #50fa7b;
+}
+
+.cards {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    display: grid;
+    background-color: var(--color_rocket);
+    cursor: pointer;
+
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card_info {
+    display: grid;
+    align-items: center;
+}
+
+/* MODAL */
+
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    margin: 5vh auto;
+    position: relative;
+}
+
+.modal-buttons {
+    color: black;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+}
+
+/* MODAL.ACTIVE */
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+iframe {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    left: 0;
+    top: 5%;
+}
+
+/* MODAL.MAXIMIZE */
+
+.modal.maximize {
+    width: 100%;
+    height: 100%;
+}
